@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Overlay</title>
+
+<style>
+html,body{
+margin:0;
+background:transparent;
+overflow:hidden;
+font-family:Arial;
+}
+
+.card{
+position:absolute;
+top:50%;
+width:500px;
+height:160px;
+display:flex;
+align-items:center;
+gap:15px;
+padding:15px;
+border-radius:25px;
+opacity:0;
+}
+
+.left{
+left:20px;
+transform:translate(-600px,-50%);
+background:linear-gradient(90deg,#00ffff44,transparent);
+border-left:5px solid #00ffff;
+animation:leftAnim 32s infinite;
+}
+
+.right{
+right:20px;
+transform:translate(600px,-50%);
+flex-direction:row-reverse;
+text-align:right;
+background:linear-gradient(270deg,#ff004444,transparent);
+border-right:5px solid #ff0044;
+animation:rightAnim 32s infinite;
+}
+
+img{
+width:130px;
+}
+
+.name{
+font-size:28px;
+font-weight:bold;
+color:white;
+}
+
+.wins{
+font-size:40px;
+font-weight:bold;
+}
+
+.plus{color:#00ffff;}
+.minus{color:#ff0044;}
+
+@keyframes leftAnim{
+0%,5%{opacity:0;transform:translate(-600px,-50%);}
+10%,20%{opacity:1;transform:translate(0,-50%);}
+25%,100%{opacity:0;transform:translate(-600px,-50%);}
+}
+
+@keyframes rightAnim{
+0%,5%{opacity:0;transform:translate(600px,-50%);}
+10%,20%{opacity:1;transform:translate(0,-50%);}
+25%,100%{opacity:0;transform:translate(600px,-50%);}
+}
+
+.delay1{animation-delay:4s;}
+.delay2{animation-delay:8s;}
+.delay3{animation-delay:12s;}
+.delay4{animation-delay:16s;}
+.delay5{animation-delay:20s;}
+.delay6{animation-delay:24s;}
+.delay7{animation-delay:28s;}
+</style>
+</head>
+
+<body>
+
+<div class="card left">
+<img src="galaxy.png">
+<div>
+<div class="name">Galaxy</div>
+<div class="wins plus">+3</div>
+</div>
+</div>
+
+<div class="card right delay1">
+<img src="dinosaur.png">
+<div>
+<div class="name">Dinosaur</div>
+<div class="wins minus">-3</div>
+</div>
+</div>
+
+<div class="card left delay2">
+<img src="whale.png">
+<div>
+<div class="name">Whale</div>
+<div class="wins plus">+10</div>
+</div>
+</div>
+
+<div class="card right delay3">
+<img src="future.png">
+<div>
+<div class="name">Future Whale</div>
+<div class="wins minus">-10</div>
+</div>
+</div>
+
+<div class="card left delay4">
+<img src="jets.png">
+<div>
+<div class="name">Jets</div>
+<div class="wins plus">+30</div>
+</div>
+</div>
+
+<div class="card right delay5">
+<img src="interstellar.png">
+<div>
+<div class="name">Interstellar</div>
+<div class="wins minus">-45</div>
+</div>
+</div>
+
+<div class="card left delay6">
+<img src="leopard.png">
+<div>
+<div class="name">Leopard</div>
+<div class="wins plus">+50</div>
+</div>
+</div>
+
+<div class="card right delay7">
+<img src="lion.png">
+<div>
+<div class="name">Lion</div>
+<div class="wins minus">-50</div>
+</div>
+</div>
+
+</body>
+</html>
